@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureVision - CCTV Solutions & Security Systems</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home-page">
+
+<header>
+    <div class="top-bar">
+        <div class="container">
+            <span>📞 076 628 3634 | ✉ manojsemasinha03@gmail.com</span>
+            <div>
+                <a href="admin.html">Admin Panel</a>
+                <a href="#">Track Order</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="icon">👁️</span> SecureVision
+            </a>
+            <button class="mobile-toggle">☰</button>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">All Products</a>
+                <a href="products.html?category=dvr">DVR</a>
+                <a href="products.html?category=nvr">NVR</a>
+                <a href="products.html?category=bullet">Cameras</a>
+                <a href="products.html?category=accessories">Accessories</a>
+                <a href="products.html?category=mobile-accessories">Mobile Accessories</a>
+                <a href="product-detail.html?id=15">Camera Fix Service</a>
+                <div class="cart-icon" onclick="location.href='cart.html'">
+                    🛒 <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Protect What Matters Most with <span>Smart CCTV</span></h1>
+            <p>Hikvision cameras, DVRs, EZVIZ Wi-Fi cameras, accessories, and professional installation. Trusted brands at the best prices in Sri Lanka.</p>
+            <div>
+                <a href="products.html" class="btn btn-primary">Shop Now</a>
+                <a href="#categories" class="btn btn-outline">Explore</a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <h3>14+</h3>
+                    <p>Products</p>
+                </div>
+                <div>
+                    <h3>2000+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div>
+                    <h3>5★</h3>
+                    <p>Customer Rating</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slider">
+            <div class="hero-slides">
+                <img src="images/prod-06.jpg" alt="Hikvision DVR" class="hero-slide active">
+                <img src="images/prod-04.jpg" alt="Hikvision Camera" class="hero-slide">
+                <img src="images/prod-13.webp" alt="EZVIZ Camera" class="hero-slide">
+                <img src="images/prod-11.jpg" alt="Hikvision Monitor" class="hero-slide">
+            </div>
+            <div class="hero-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+                <span class="dot" onclick="goToSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="categories">
+    <div class="container">
+        <div class="section-title">
+            <h2>Shop by Category</h2>
+            <div class="underline"></div>
+            <p>Find the perfect security solution for your needs</p>
+        </div>
+        <div class="categories-grid">
+            <a href="products.html?category=dvr" class="category-card">
+                <span class="icon">🖥️</span>
+                <h3>DVR Systems</h3>
+                <p>4CH & 8CH Hikvision DVRs</p>
+            </a>
+            <a href="products.html?category=dome" class="category-card">
+                <span class="icon">📷</span>
+                <h3>Cameras</h3>
+                <p>Hikvision Dome & Bullet</p>
+            </a>
+            <a href="products.html?category=wifi-camera" class="category-card">
+                <span class="icon">📡</span>
+                <h3>Wi-Fi Cameras</h3>
+                <p>EZVIZ Wi-Fi Cameras</p>
+            </a>
+            <a href="products.html?category=accessories" class="category-card">
+                <span class="icon">🔌</span>
+                <h3>Accessories</h3>
+                <p>Cables, Connectors & More</p>
+            </a>
+            <a href="products.html?category=mobile-accessories" class="category-card">
+                <span class="icon">📱</span>
+                <h3>Mobile Accessories</h3>
+                <p>Mobile Phones & Accessories</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background:linear-gradient(rgba(15,12,41,0.85), rgba(15,12,41,0.85)), url('images/hero-cctv.jpg') center/cover no-repeat fixed;">
+    <div class="container">
+        <div class="section-title" style="color:#fff;">
+            <h2 style="color:#fff;">Featured Products</h2>
+            <div class="underline"></div>
+            <p style="color:rgba(255,255,255,0.7);">Best selling security products</p>
+        </div>
+        <div class="products-grid" id="featured-products"></div>
+        <div style="text-align:center;margin-top:40px;">
+            <a href="products.html" class="btn btn-secondary">View All Products →</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Why Choose Us</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="icon">🚚</span>
+                <h3>Free Delivery</h3>
+                <p>Free delivery on orders over Rs. 10,000</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">🛡️</span>
+                <h3>2 Year Warranty</h3>
+                <p>All Hikvision products with warranty</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">🔧</span>
+                <h3>Installation</h3>
+                <p>Professional CCTV installation service</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">📞</span>
+                <h3>24/7 Support</h3>
+                <p>Round the clock technical support</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="brands-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Trusted Brands</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="brands-row">
+            <span class="brand-item">Hikvision</span>
+            <span class="brand-item">Dahua</span>
+            <span class="brand-item">EZVIZ</span>
+            <span class="brand-item">Lenovo</span>
+        </div>
+    </div>
+</section>
+
+<section class="newsletter">
+    <div class="container">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for latest products and deals</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>👁️ SecureVision</h3>
+                <p>Your trusted partner for Hikvision CCTV and security solutions in Sri Lanka. We provide cameras, DVRs, EZVIZ Wi-Fi cameras, accessories, and professional installation services.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="products.html?category=dvr">DVR Systems</a></li>
+                    <li><a href="products.html?category=nvr">NVR Systems</a></li>
+                    <li><a href="products.html?category=bullet">Cameras</a></li>
+                    <li><a href="products.html?category=wifi-camera">Wi-Fi Cameras</a></li>
+                    <li><a href="products.html?category=accessories">Accessories</a></li>
+                    <li><a href="products.html?category=mobile-accessories">Mobile Accessories</a></li>
+                    <li><a href="products.html?category=monitors">Monitors</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>📍 Malabe, Colombo, Sri Lanka</li>
+                    <li>📞 Manoj: 076 628 3634</li>
+                    <li>✉ manojsemasinha03@gmail.com</li>
+                    <li>🕐 Mon-Sat: 9AM - 7PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SecureVision. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/data.js?v=25"></script>
+<script src="js/app.js"></script>
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.dot');
+
+function goToSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    currentSlide = n;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+}
+
+function nextSlide() {
+    goToSlide((currentSlide + 1) % slides.length);
+}
+
+setInterval(nextSlide, 3000);
+</script>
+</body>
+</html>

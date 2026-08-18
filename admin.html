@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - SecureVision CCTV</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="admin-layout">
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <h2>👁️ SecureVision</h2>
+            <p>Admin Panel</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="active" data-section="dashboard">
+                <span class="icon">📊</span> Dashboard
+            </a>
+            <a href="#" data-section="products">
+                <span class="icon">📦</span> Products
+            </a>
+            <a href="#" data-section="orders">
+                <span class="icon">🛒</span> Orders
+            </a>
+            <a href="index.html">
+                <span class="icon">🌐</span> View Website
+            </a>
+        </nav>
+    </aside>
+
+    <main class="admin-main">
+        <!-- DASHBOARD -->
+        <div class="admin-section" id="section-dashboard">
+            <div class="admin-header">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="icon blue">📦</div>
+                    <div class="info">
+                        <h3 id="stat-products">0</h3>
+                        <p>Total Products</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon orange">🛒</div>
+                    <div class="info">
+                        <h3 id="stat-orders">0</h3>
+                        <p>Total Orders</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon green">💰</div>
+                    <div class="info">
+                        <h3 id="stat-revenue">Rs. 0</h3>
+                        <p>Total Revenue</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon red">⚠️</div>
+                    <div class="info">
+                        <h3 id="stat-lowstock">0</h3>
+                        <p>Low Stock Items</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCTS -->
+        <div class="admin-section" id="section-products" style="display:none;">
+            <div class="admin-header">
+                <h1>Products</h1>
+                <button class="btn" onclick="addProduct()">+ Add Product</button>
+            </div>
+            <div class="table-container">
+                <div class="table-header">
+                    <h2>All Products</h2>
+                    <input type="text" class="search-box" id="admin-search" placeholder="Search products...">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ORDERS -->
+        <div class="admin-section" id="section-orders" style="display:none;">
+            <div class="admin-header">
+                <h1>Orders</h1>
+            </div>
+            <div class="table-container">
+                <div class="table-header">
+                    <h2>All Orders</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Items</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- ADD/EDIT PRODUCT MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+        <h2 id="modal-title">Add New Product</h2>
+        <form id="product-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Product Name *</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Brand *</label>
+                    <input type="text" name="brand" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Category *</label>
+                    <select name="category" required>
+                        <option value="dome">Dome Camera</option>
+                        <option value="bullet">Bullet Camera</option>
+                        <option value="ptz">PTZ Camera</option>
+                        <option value="dvr">DVR</option>
+                        <option value="nvr">NVR</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="mobile-accessories">Mobile Accessories</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Icon (Emoji)</label>
+                    <input type="text" name="icon" placeholder="📷">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Price (Rs.) *</label>
+                    <input type="number" name="price" required min="0">
+                </div>
+                <div class="form-group">
+                    <label>Old Price (Rs.)</label>
+                    <input type="number" name="oldPrice" min="0">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Stock Quantity *</label>
+                    <input type="number" name="stock" required min="0">
+                </div>
+                <div class="form-group">
+                    <label>Badge</label>
+                    <input type="text" name="badge" placeholder="Sale, New, etc.">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Description *</label>
+                <textarea name="description" rows="3" required></textarea>
+            </div>
+            <div style="margin-bottom:15px;">
+                <label style="font-weight:600;font-size:0.85rem;display:block;margin-bottom:8px;">Specifications (Key-Value pairs)</label>
+                <div class="form-row">
+                    <input type="text" name="specKey1" placeholder="Key (e.g. Resolution)">
+                    <input type="text" name="specVal1" placeholder="Value">
+                </div>
+                <div class="form-row" style="margin-top:8px;">
+                    <input type="text" name="specKey2" placeholder="Key">
+                    <input type="text" name="specVal2" placeholder="Value">
+                </div>
+                <div class="form-row" style="margin-top:8px;">
+                    <input type="text" name="specKey3" placeholder="Key">
+                    <input type="text" name="specVal3" placeholder="Value">
+                </div>
+                <div class="form-row" style="margin-top:8px;">
+                    <input type="text" name="specKey4" placeholder="Key">
+                    <input type="text" name="specVal4" placeholder="Value">
+                </div>
+                <div class="form-row" style="margin-top:8px;">
+                    <input type="text" name="specKey5" placeholder="Key">
+                    <input type="text" name="specVal5" placeholder="Value">
+                </div>
+                <div class="form-row" style="margin-top:8px;">
+                    <input type="text" name="specKey6" placeholder="Key">
+                    <input type="text" name="specVal6" placeholder="Value">
+                </div>
+            </div>
+            <div class="form-group">
+                <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+                    <input type="checkbox" name="active" checked style="width:16px;height:16px;"> Active (Visible on website)
+                </label>
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="btn-cancel" id="modal-cancel">Cancel</button>
+                <button type="submit" class="btn-save">Save Product</button>
+            </div>
+        </form>
+        <button id="modal-close" style="position:absolute;top:15px;right:15px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--gray);">✕</button>
+    </div>
+</div>
+
+<script src="js/data.js?v=25"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

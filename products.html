@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - SecureVision CCTV</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="top-bar">
+        <div class="container">
+            <span>📞 076 628 3634 | ✉ manojsemasinha03@gmail.com</span>
+            <div>
+                <a href="admin.html">Admin Panel</a>
+                <a href="#">Track Order</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="icon">👁️</span> SecureVision
+            </a>
+            <button class="mobile-toggle">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html" class="active">All Products</a>
+                <a href="products.html?category=dvr">DVR</a>
+                <a href="products.html?category=nvr">NVR</a>
+                <a href="products.html?category=bullet">Cameras</a>
+                <a href="products.html?category=accessories">Accessories</a>
+                <a href="products.html?category=mobile-accessories">Mobile Accessories</a>
+                <a href="product-detail.html?id=15">Camera Fix Service</a>
+                <div class="cart-icon" onclick="location.href='cart.html'">
+                    🛒 <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="page-header">
+    <div class="container">
+        <h1>Our Products</h1>
+        <div class="breadcrumb"><a href="index.html">Home</a> / Products</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="products-layout">
+        <aside class="sidebar">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <label>Search</label>
+                <input type="text" id="filter-search" placeholder="Search products...">
+            </div>
+            <div class="filter-group">
+                <label>Category</label>
+                <select id="filter-category">
+                    <option value="all">All Categories</option>
+                    <option value="dvr">DVR Systems</option>
+                    <option value="nvr">NVR Systems</option>
+                    <option value="bullet">Hikvision Cameras</option>
+                    <option value="dome">EZVIZ Cameras</option>
+                    <option value="bullet">Bullet Cameras</option>
+                    <option value="monitors">Monitors</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="mobile-accessories">Mobile Accessories</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Brand</label>
+                <select id="filter-brand">
+                    <option value="all">All Brands</option>
+                    <option value="Hikvision">Hikvision</option>
+                    <option value="Dahua">Dahua</option>
+                    <option value="EZVIZ">EZVIZ</option>
+                    <option value="Lenovo">Lenovo</option>
+                    <option value="Generic">Generic</option>
+                </select>
+            </div>
+        </aside>
+
+        <div>
+            <div class="sort-bar">
+                <span id="result-count" class="results">Loading...</span>
+                <select id="sort-products">
+                    <option value="default">Sort by: Default</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating">Highest Rated</option>
+                    <option value="name">Name A-Z</option>
+                </select>
+            </div>
+            <div class="products-grid" id="products-grid"></div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>👁️ SecureVision</h3>
+                <p>Your trusted partner for Hikvision CCTV and security solutions in Sri Lanka.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>📍 Malabe, Colombo, Sri Lanka</li>
+                    <li>📞 Manoj: 076 628 3634</li>
+                    <li>✉ manojsemasinha03@gmail.com</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SecureVision. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/data.js?v=25"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

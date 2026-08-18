@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Success - SecureVision CCTV</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="top-bar">
+        <div class="container">
+            <span>📞 076 628 3634 | ✉ manojsemasinha03@gmail.com</span>
+            <div>
+                <a href="admin.html">Admin Panel</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="icon">👁️</span> SecureVision
+            </a>
+            <button class="mobile-toggle">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <div class="cart-icon" onclick="location.href='cart.html'">
+                    🛒 <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="success-page">
+        <div class="icon">✅</div>
+        <h1>Order Placed Successfully!</h1>
+        <p>Thank you for your purchase. Your order has been received and is being processed.</p>
+        <p style="font-size:1.1rem;color:var(--dark);margin-bottom:10px;">Order ID: <strong id="order-id"></strong></p>
+        <p style="color:var(--gray);margin-bottom:30px;">We will send you a confirmation email with delivery details shortly.</p>
+        <div>
+            <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+            <a href="products.html" class="btn btn-secondary" style="margin-left:10px;">Browse Products</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 SecureVision. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const params = new URLSearchParams(window.location.search);
+        const orderId = params.get('id');
+        if (orderId) {
+            document.getElementById('order-id').textContent = orderId;
+        }
+    });
+</script>
+<script src="js/data.js?v=25"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - SecureVision CCTV</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="top-bar">
+        <div class="container">
+            <span>📞 076 628 3634 | ✉ manojsemasinha03@gmail.com</span>
+            <div>
+                <a href="admin.html">Admin Panel</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="icon">👁️</span> SecureVision
+            </a>
+            <button class="mobile-toggle">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="products.html?category=dome">Dome Cameras</a>
+                <a href="products.html?category=nvr">NVR</a>
+                <a href="products.html?category=bullet">Bullet Cameras</a>
+                <a href="products.html?category=accessories">Accessories</a>
+                <a href="products.html?category=mobile-accessories">Mobile Accessories</a>
+                <a href="product-detail.html?id=15">Camera Fix Service</a>
+                <div class="cart-icon" onclick="location.href='cart.html'">
+                    🛒 <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="page-header">
+    <div class="container">
+        <h1>Product Details</h1>
+        <div class="breadcrumb"><a href="index.html">Home</a> / <a href="products.html">Products</a> / Detail</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="product-detail" id="product-detail"></div>
+</div>
+
+<section class="section" style="background:var(--white);">
+    <div class="container">
+        <div class="section-title">
+            <h2>Related Products</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="products-grid" id="related-products"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>👁️ SecureVision</h3>
+                <p>Your trusted partner for professional CCTV and security solutions in Sri Lanka.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>📍 Malabe, Colombo, Sri Lanka</li>
+                    <li>📞 Manoj: 076 628 3634</li>
+                    <li>✉ manojsemasinha03@gmail.com</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SecureVision. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/data.js?v=25"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
